@@ -1,0 +1,47 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    Layout = "SiteDesign.cshtml";
+}
+
+<div class="row">
+    <div class="col-xs-12">
+        <div class="page-header">
+            <h1>Contact: @Umbraco.Field("title")</h1>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-6">
+        @if ( @Umbraco.Field("emailAddress") != null )
+        {
+            <div class="page-header">
+                <h2>Online</h2>
+            </div>
+            
+            <!-- favorite form filling choice goes here -->
+			@Html.Partial("DisplayContactForm")
+        }
+
+        @if ( @Umbraco.Field("telephone") != null )
+        {
+            <div class="page-header">
+                <h2>Telephone</h2>
+            </div>
+            <p class="lead">@Umbraco.Field("telephone")</p>
+        }
+
+        @if ( @Umbraco.Field("address") != null )
+        {
+            <div class="page-header">
+                <h2>Address</h2>
+            </div>
+            <p>@Umbraco.Field("address")</p>
+        }
+    </div>
+    <div class="col-md-6">
+        @Umbraco.Field("bodyText")
+
+        @Html.Partial("RelatedLinks")
+    </div>
+</div>

@@ -1,0 +1,31 @@
+@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+
+@*
+    Related Items / Links / Pages 
+*@
+
+@{
+    if ( Model.Content.HasValue("relatedItems") )
+    {
+        if ( CurrentPage.relatedItems.Count > 0 )
+        {
+            <div class="related-items">
+                <div class="page-header">
+                    <h2>@umbraco.library.GetDictionaryItem("Related")</h2>
+                </div>
+                <ul class="nav nav-list">
+                    @foreach(var link in CurrentPage.relatedItems)
+                    {
+                        <li>
+                            @{
+                                var linkTarget = link.newwindow == "1" ? "target=\"_blank\"" : "";
+                            }
+                            <a href="@link.link" @Html.Raw(linkTarget)>@link.title</a>
+                        </li>
+                    }
+                </ul>
+            </div>
+        } 
+        
+    }
+}

@@ -1,0 +1,42 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+
+@*
+	event listings on the homepage -
+
+	this and news listings are very similar and you could just
+	combine the two macros and pass parameters for a more generic 
+	result.
+
+	for the starter kit we have kept it simple so they are seperate 
+	because it's easier to understand what's occurin
+*@
+
+@{
+	
+	var allEvents = Umbraco.TypedContentAtXPath("//EventItem")
+		.Where(x=>x.IsVisible() ) 
+		.OrderByDescending(x=>x.GetPropertyValue<DateTime>("eventStart")).Take(2);
+}
+
+@if (allEvents.Any())
+{
+	<h3>Events</h3>
+	<div class="row">
+		
+	@foreach(var eventItem in allEvents)
+	{
+		var eventTitle = eventItem.GetPropertyValue("title");
+		
+		<div class="col-md-6">
+			<div class="thumbnail item">
+				<img src="http://placehold.it/235x200/213/fff&amp;text=@eventTitle">
+				<div class="caption">
+					<h3><a href="@eventItem.Url">@eventTitle</a></h3>
+					<p>@eventItem.GetPropertyValue("eventSummary")</p>
+					<div class="more-link"><a href="@eventItem.Url">more &raquo;</a></div>
+				</div>
+			</div>
+		</div>
+	}
+	</div>
+}				

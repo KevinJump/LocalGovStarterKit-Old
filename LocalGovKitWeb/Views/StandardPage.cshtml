@@ -1,0 +1,15 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    Layout = "SideNavPages.cshtml";
+}
+
+@* Standard page : Every part of the page layout
+   has been defined in the master views, this makes
+   templates at this level nice and simple and just
+   concerned with the content area of the page
+*@
+
+<div class="page-header">
+	<h1>@Umbraco.Field("title")</h1>
+</div>
+@Umbraco.Field("bodyText")

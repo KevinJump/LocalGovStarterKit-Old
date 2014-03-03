@@ -1,0 +1,33 @@
+<div ng-controller="Jumoo.OpeningSoonController">
+
+	<table ng-model="model.value">
+		<tr ng-repeat="day in model.value" class="jumoo-opening-entry">
+			<td>{{day.name}}</td>
+			<td><input type="checkbox" ng-model="day.scheduled"></td>
+			<td ng-show="day.scheduled">
+				<input type="text" time-picker ng-model="day.open" class="jumoo-opening-time">
+				until 
+				<input type="text" time-picker ng-model="day.close" class="jumoo-opening-time">
+			</td>
+			<td ng-show="!day.scheduled">
+				not scheduled
+			</td>
+			
+			<td ng-show="model.config.SecondSet != 0 && day.scheduled"> and </td>
+			<td ng-show="model.config.SecondSet != 0 && day.scheduled">
+				<input type="text" time-picker ng-model="day.open2" class="jumoo-opening-time">
+				until 
+				<input type="text" time-picker ng-model="day.close2" class="jumoo-opening-time">
+			</td>
+			</div>
+		</tr>
+		
+		<tr>
+			<td colspan="4">
+				<a ng-show="model.config.enableClear" ng-click="clearAll()" class="btn">clear all</a>
+				<a ng-show="model.config.enableAutofill" ng-click="autofill()" class="btn">Autofill</a>
+			</td>
+		</tr>
+		
+	</table>
+</div>

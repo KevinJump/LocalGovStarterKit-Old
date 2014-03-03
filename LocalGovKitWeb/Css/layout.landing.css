@@ -1,0 +1,88 @@
+/* 
+    ======= landing page layouts ====== 
+*/
+
+.landing-item 
+{
+	margin-bottom: 1.2em;
+	min-height: 190px;
+}
+
+a.landing-link {
+    display: block;
+    padding: 1em 0;
+    text-decoration: none;
+}
+
+a.landing-link:hover {
+    background-color: #eee;
+}
+
+.landing-title {
+    border-bottom: 1px solid #ddd;
+}
+
+.landing-title h3 {
+    margin-top: 0.1em;
+}
+
+.landing-title h3 a {
+	color: #2a6496;
+}
+
+
+.landing-item .fa {
+    font-size: 1.5em;
+    float: left;
+    padding: 0em 0.6em;
+}
+
+
+.landing-text {
+    padding: 0em 0em;
+    color:  #444;
+}
+
+.landing-more h2 
+{
+	margin-top: 0;
+}
+
+.page-header 
+{
+	margin-top: 0;
+}
+
+/*
+	========== Homepage =============
+*/
+
+
+.homepage-links .landing-item 
+{
+	min-height: 175px;
+}
+
+.homepage-links h3>a 
+{
+	color: ##31708f;
+}
+
+
+ul.section-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul.section-list li {
+    display: inline;
+    padding: 0;
+    margin:0;
+}
+
+ul.section-list li.section-more-link 
+{
+	font-weight: bold;
+}
+/* EDITOR PROPERTIES - PLEASE DON'T DELETE THIS LINE TO AVOID DUPLICATE PROPERTIES */

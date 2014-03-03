@@ -1,0 +1,35 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+	
+@* list of venues in blocks *@
+	
+@{
+
+    var venues = Model.Content.Children.Where(
+		x => x.IsVisible() && x.DocumentTypeAlias == "VenuePage"); 
+
+	
+
+	if ( venues.Any() )
+	{
+	
+		foreach(var venue in venues)
+		{
+		
+			<div class="col-md-4">
+				<div class="thumbnail">
+					<a href="@venue.Url">
+						<img src="http://placehold.it/300x200/213/fff&amp;text=Venue%20picture">
+						<div class="caption">
+							<h3>@venue.GetPropertyValue("title")</h3>
+							<p>
+								@venue.GetPropertyValue("venueAddress")
+							</p>
+						</div>
+					</a>
+				</div>
+			</div>
+			
+		}
+		
+	}
+}

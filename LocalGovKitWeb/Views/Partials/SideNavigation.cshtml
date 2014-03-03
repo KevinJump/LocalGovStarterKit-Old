@@ -1,0 +1,38 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+
+@{
+    var siblings = Model.Content.Parent.Children().Where(x => x.IsVisible());
+    
+    if (siblings.Count() > 0 )
+    {
+        <div class="side-bar">
+            <div class="page-header">
+                <h2>@Model.Content.GetPropertyValue("title")</h2>
+            </div>
+        </div>
+
+        <ul class="nav nav-stacked nav-pills">
+            @foreach(var node in siblings)
+            {
+                <li class="@(node.Id == CurrentPage.Id ? "active" : null)"><a href="@node.Url">@node.GetPropertyValue("title")</a>
+                
+                @if (@node.Id == CurrentPage.Id)
+                {
+                    <!-- child nodes here.-->
+                    var children = node.Children().Where(x => x.IsVisible());
+                    
+                    if ( children.Count() > 0 )
+                    { 
+                        <ul class="nav nav-stacked nav-pills">
+                            @foreach(var child in children)
+                            {
+                                <li><a href="@child.Url">@child.GetPropertyValue("title")</a></li>
+                            }
+                        </ul>
+                    }
+                }
+                </li>
+            }
+        </ul>    
+    }
+}

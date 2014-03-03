@@ -1,0 +1,39 @@
+﻿@inherits Umbraco.Web.Macros.PartialViewMacroPage
+	
+@{
+	var today = DateTime.Now.ToString("dddd").ToLower();
+}	
+
+<h3>Opening times</h3>
+<table class="table">
+<tbody>
+@foreach( var opening in CurrentPage.OpeningTimes)
+{
+	var rowClass = "";
+	if ( @opening.name.ToString().ToLower() == @today ) {
+		rowClass = "class=info";
+	}
+	
+	<tr @rowClass>
+		<td class="venue-time-day">@opening.name</td>
+		@if( opening.scheduled == "true" ) {
+			<td class="venue-time-open">@opening.open</td>
+			<td>-</td>
+			<td class="venue-time-close">@opening.close</td>
+				
+			if( opening.open2 != null && !string.IsNullOrEmpty(opening.open2.ToString()) )
+			{
+				<td>@opening.open2</td>	
+				<td>@opening.close2</td>					
+			}				
+		}
+		else 
+		{
+			<td colspan="3">Closed</td>
+		}
+	
+	</tr>
+}
+</tbody>
+</table>
+		

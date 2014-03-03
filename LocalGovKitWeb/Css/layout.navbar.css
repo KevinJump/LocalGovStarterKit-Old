@@ -1,0 +1,35 @@
+/* nav bar */
+.navbar-default {
+	background-color: #F85916;
+	-moz-box-shadow: rgba(0,0,0,0.6) 0 0 12px -2px;
+	-webkit-box-shadow: rgba(0,0,0,0.6) 0 0 12px -2px;
+	-o-box-shadow: rgba(0,0,0,0.6) 0 0 12px -2px;
+	box-shadow: rgba(0,0,0,0.6) 0 0 12px -2px;
+	border-bottom: none;
+}
+
+.navbar-default .navbar-brand {
+    color: #fff;
+	border-right: 2px solid #C54611;
+}
+.navbar-default .navbar-nav>li>a {
+    color: #ddd;
+}
+.navbar-default .navbar-nav>.active>a {
+    background-color: #C54611;
+    color: #fff;
+}
+
+.navbar-default .navbar-nav>li>a:hover,
+.navbar-default .navbar-nav>li>a:focus
+{
+	color: #ccc;
+}
+
+
+@media (min-width: 768px) and (max-width: 991px) {
+.navbar-form .searchbox {
+			width: 120px;
+	}
+}
+/* EDITOR PROPERTIES - PLEASE DON'T DELETE THIS LINE TO AVOID DUPLICATE PROPERTIES */

@@ -1,0 +1,13 @@
+/* stuff for venue pages */
+
+.venue-time-day {
+	font-weight: bold;
+}
+
+.venues {
+	margin-top: 1.5em;
+	}
+	
+.venues .thumbnail {
+	border: 0;
+}/* EDITOR PROPERTIES - PLEASE DON'T DELETE THIS LINE TO AVOID DUPLICATE PROPERTIES */

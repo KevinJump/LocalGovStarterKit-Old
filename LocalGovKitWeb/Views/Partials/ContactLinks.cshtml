@@ -1,0 +1,49 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+
+@*
+    Displays the contact us links on a page
+*@
+
+@{
+    if ( Model.Content.HasValue("contactDetails"))
+    {
+        var contactNode = Umbraco.TypedContent(Model.Content.GetPropertyValue("contactDetails"));
+    
+        if ( contactNode != null )
+        {
+            <div class="contact-details-list">
+                <div class="page-header">
+                    <h2>@umbraco.library.GetDictionaryItem("ContactUs")</h2>
+                </div>
+                <ul class="nav nav-list">
+                    @if ( contactNode.HasValue("emailAddress"))
+                    {
+                        <li>
+                            <a href="@contactNode.Url#email">
+                                @umbraco.library.GetDictionaryItem("emailAddress")
+                            </a>
+                        </li>
+                    }
+                    
+                    @if (contactNode.HasValue("telephone"))
+                    {
+                        <li>
+                            <a href="@contactNode.Url#phone">
+                                @umbraco.library.GetDictionaryItem("Telephone")
+                            </a>
+                        </li>
+                    }
+
+                    @if (contactNode.HasValue("address"))
+                    {
+                        <li>
+                            <a href="@contactNode.Url#address">
+                                @umbraco.library.GetDictionaryItem("Address")
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </div>
+        }
+    }
+}

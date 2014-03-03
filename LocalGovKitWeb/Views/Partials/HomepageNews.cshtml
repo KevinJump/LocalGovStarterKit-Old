@@ -1,0 +1,27 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+
+		
+@{
+	
+	var allNews = Umbraco.TypedContentAtXPath("//NewsItem")
+		.Where(x=>x.IsVisible() 
+			   && x.GetPropertyValue<DateTime>("publishedDate") < DateTime.Now) 
+		.OrderByDescending(x=>x.GetPropertyValue<DateTime>("publishedDate")).Take(1);
+}
+
+@if (allNews.Any())
+{
+	<h3>News</h3>
+		
+	foreach(var newsItem in allNews)
+	{
+		<div class="thumbnail item">
+			<img src="http://placehold.it/550x200/312/fff&amp;text=news%20image">
+			<div class="caption">
+				<h3><a href="@newsItem.Url">@newsItem.GetPropertyValue("title")</a></h3>
+				<p>@newsItem.GetPropertyValue("newsSummary")</p>
+				<div class="more-link"><a href="@newsItem.Url">more &raquo;</a></div>
+			</div>
+		</div>
+	}
+}

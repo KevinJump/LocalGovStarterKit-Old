@@ -1,0 +1,46 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>
+            @Umbraco.Field("title") - 
+            @Umbraco.Field("siteName", recursive: true)
+        </title>
+	
+        <link rel="stylesheet" href="/css/bootstrap.css" type="text/css" />
+        <link rel="stylesheet" href="/css/font-awesome.min.css" type="text/css" />
+	
+        <!-- [if IE 7]>
+            <link rel="stylesheet" href="/css/font-awesome-ie7.min.css" type="text/css" />    
+        [!endif]-->
+
+        @RenderSection("Styles", false)
+
+        <!--[if lt IE 9]
+            <script src="/scripts/libs/html5shiv.js"></script>
+            <script src="/scripts/libs/respond.min.js"></script>
+        <![endif[]-->
+
+        @RenderSection("Metadata", false)
+    </head>
+
+    <body>
+        @RenderBody()
+
+        <!--scripts-->
+        <script src="/scripts/libs/jquery-1.11.0.min.js"></script>
+        <script src="/scripts/libs/bootstrap.min.js"></script>
+        @RenderSection("Scripts", false)
+
+        <!-- google analytics here... -->
+        <script>
+
+        </script>
+    </body>
+</html>

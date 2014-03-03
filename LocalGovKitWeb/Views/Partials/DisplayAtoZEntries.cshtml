@@ -1,0 +1,23 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+	
+@if (!string.IsNullOrEmpty(Request.QueryString["letter"]))    
+{
+	var letter = Request.QueryString["letter"].ToUpper().Substring(0,1) ;
+
+    var root = Model.Content.AncestorOrSelf(1);
+
+	var nodes = root.DescendantsOrSelf().Where( x => x.IsVisible() && x.Name.ToUpper().StartsWith(letter) );	
+	
+	<h2>@letter</h2>
+	
+	if ( nodes.Any() )
+	{
+		<ul>	
+		@foreach(var node in nodes)
+		{
+			<li><a href="@node.Url">@node.GetPropertyValue("title")</a></li>
+		}
+		</ul>
+		
+	}	
+}

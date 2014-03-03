@@ -1,0 +1,13 @@
+<div ng-controller="tooorangey.uCssClassNameIconPickerController"> 
+   
+<ul class="uCssClassNameIconPicker" ng-init="init()">
+<li ng-repeat="ccn in classnames" ng-class="getSelectedClass(ccn,model.value)" id="iconHolder-{{ccn}}">
+<a ng-click="setSelectedClass(ccn)"><span ng-bind-html="renderIconPattern(ccn)"></span><span>{{ccn}}</span></a>
+</li>
+
+</ul>
+    <p><i class="currentIcon fa fa-{{model.value}}"></i>
+        <select id="selectClassName" ng-model="model.value" ng-options="ccn for ccn in classnames">      
+        </select></p>
+
+    <span ng-bind="info"></span>

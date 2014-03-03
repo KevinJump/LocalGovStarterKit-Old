@@ -1,0 +1,33 @@
+﻿@inherits Umbraco.Web.Macros.PartialViewMacroPage
+
+@*
+  Render the sitemap by passing the root node to the traverse helper
+
+  this is a full site map - you will want to cache this macro to make
+  it not take all day on a large site.
+
+*@
+<div class="sitemap">
+    @Traverse(CurrentPage.AncestorOrSelf(1))
+</div>
+
+@*Helper method to travers through all descendants*@
+@helper Traverse(dynamic node)
+{
+	var items = node.Children.Where("Visible") ;
+
+    if (items.Any())
+    {
+        <ul>
+            @foreach (var item in items)
+            {
+                <li class="level-@item.Level">
+                    <a href="@item.Url">@item.Name</a>
+
+                    @*Run the traverse helper again *@
+                    @Traverse(item)
+                </li>
+            }
+        </ul>
+    }
+}

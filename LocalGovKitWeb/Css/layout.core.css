@@ -1,0 +1,25 @@
+body
+{
+	font-size: 14pt;
+	margin-top: 55px;
+	font-family: 'Open Sans', Verdana, Helvetica, sans-serif;
+	background: #fcfcfc;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Open Sans', Verdana, Helvetica, sans-serif;
+	font-weight: 800;	
+}
+
+/* remove rounded corners */
+.container .jumbotron, 
+.alert, 
+.well, 
+.form-control, 
+.btn, 
+.breadcrumb,
+.nav-pills>li>a
+{
+	border-radius: 0;
+}
+/* EDITOR PROPERTIES - PLEASE DON'T DELETE THIS LINE TO AVOID DUPLICATE PROPERTIES */

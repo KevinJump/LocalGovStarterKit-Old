@@ -1,0 +1,27 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+
+@* Ensure that the Current Page has children, where the property umbracoNaviHide is not True *@
+@{
+	var nodes = Model.Content.Children.Where(x => x.IsVisible()) ;
+	
+	if( nodes.Any() )
+	{
+		<ul class="list-unstyled page-list">            
+			@* For each child page under the root node, where the property umbracoNaviHide is not True *@
+			@foreach (var childPage in nodes)
+			{
+				<li>
+					<h3><a href="@childPage.Url">@childPage.GetPropertyValue("title")</a></h3>					
+					@{
+						var pubdate = childPage.GetPropertyValue<DateTime>("publishedDate");
+						
+						if ( pubdate > DateTime.Now.AddYears(-10) )
+						{
+							<small>@pubdate.ToString("dddd MMMM yyyy")</small>
+						}
+					}
+				</li>
+			}
+		</ul>
+	}
+}

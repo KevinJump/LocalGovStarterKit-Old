@@ -1,0 +1,29 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    Layout = "SiteDesign.cshtml";
+}
+
+@section Metadata {
+    @RenderSection("Metadata", false)
+}
+
+<div class="row">
+    <div class="col-lg-8">
+        @RenderBody()
+    </div>
+    <div class="col-lg-4">
+        @Html.Partial("SideNavigation")
+        @Html.Partial("RelatedLinks")
+        @Html.Partial("ContactLinks")
+		@RenderSection("Sidebar", false)
+    </div>
+
+</div>
+
+@section Scripts {
+    @RenderSection("Scripts", false) 
+}
+
+@section Footer {
+    @RenderSection("Footer", false)
+}

@@ -1,0 +1,12 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+	
+@* I am lazy so this macro writes out the letters A-Z and links them *@
+	
+
+<ul class="atoz-letters">
+@for(char n = 'A'; n < 'Z'+1; n++)
+{
+	<li><a href="/AtoZ/?letter=@n.ToString()">@n</li>	
+	
+}
+</ul>

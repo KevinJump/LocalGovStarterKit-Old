@@ -1,0 +1,58 @@
+{
+    propertyEditors: [
+     {
+        alias: "tooorangey.uCssClassNameIconPicker",
+        name: "Class Name Icon Picker",        
+        valueType: "JSON",
+        editor: {
+        view: "~/App_Plugins/uCssClassNameIconPicker/ucssclassnameiconpickereditor.html",
+        hideLabel:true,
+        },
+        prevalues: {
+            fields: [
+                {
+                    label: "PathToStylesheet",
+                    description: "Put in the relative path to the stylesheet",
+                    key: "cssPath",
+                    view: "requiredfield",
+                    validation: [
+                        {
+                            type: "Required" 
+                        }                        
+                    ]
+                },
+                 {
+                    label: "Class Name Regex",
+                    description: "put in the regex pattern that matches the class names",
+                    key: "cssRegex",
+                    view: "requiredfield",
+                    validation: [
+                        {
+                            type: "Required" 
+                        }                        
+                    ]
+                },
+                 {
+                    label: "Exclusion list",
+                    description: "comma delimited list of styles to exclude",
+                    key: "excludeList",
+                    view: "TextString"
+                }
+				,
+                 {
+                    label: "Icon Pattern",
+                    description: "Html pattern to display icon, eg <i class='icon icon-{0}'></i>",
+                    key: "iconPattern",
+                    view: "TextString"
+                }
+            ]
+        }
+        }
+    
+    ],
+    parameterEditors:[],
+   javascript: [
+        '~/App_Plugins/uCssClassNameIconPicker/ucssclassnameiconpicker.controller.js'
+    ],
+    css: [  '~/App_Plugins/uCssClassNameIconPicker/ucssclassnameiconpicker.css']
+}

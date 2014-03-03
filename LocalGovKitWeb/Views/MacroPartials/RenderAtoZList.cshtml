@@ -1,0 +1,21 @@
+﻿@inherits Umbraco.Web.Macros.PartialViewMacroPage
+	
+@if (!string.IsNullOrEmpty(Request.QueryString["letter"]))    
+{
+	var letter = Request.QueryString["letter"] ;
+
+
+	var nodes = CurrentPage.AncestorOrSelf(1)
+                         .DescendantsOrSelf().Where("name == \"Help\"");
+	if ( nodes.Any() )
+	{
+		<h3>some-razor</h3>
+	
+		foreach(var node in nodes)
+		{
+			<li><a href="@node.Url">@node.title</a></li>
+		}
+		
+	}
+	
+}

@@ -1,0 +1,16 @@
+﻿@inherits Umbraco.Web.Macros.PartialViewMacroPage
+
+@{
+	var latlng = Model.Content.GetPropertyValue<GMapsLocation>("venueLocation");
+}
+
+<div id="map_venue" 
+	style="height:400px; background-color: #ddd;"
+	data-map-lat="@latlng.Lat"
+	data-map-lng="@latlng.Lng"	
+	data-name='@Model.Content.GetPropertyValue("title")'
+	data-address='@Model.Content.GetPropertyValue("venueAddress")'
+	data-venue-type='@Model.Content.GetPropertyValue("venueType")'
+	>	
+</div>
+	

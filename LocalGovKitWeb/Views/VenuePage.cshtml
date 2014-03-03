@@ -1,0 +1,36 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    Layout = "SiteDesign.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="page-header">
+            <h1>@Umbraco.Field("title")</h1>
+        </div>
+		
+		@Umbraco.RenderMacro("RenderOpeningTimes")
+        @Umbraco.Field("bodyText")
+
+			
+    </div>
+
+    <div class="col-md-6">
+
+		@Umbraco.RenderMacro("RenderVenueMap")		
+
+        @Html.Partial("RelatedLinks")
+        @Html.Partial("ContactLinks")
+    </div>
+</div>
+
+@section Scripts {
+<script type="text/javascript" src="//www.google.com/jsapi"></script>
+<script type="text/javascript" src="/scripts/ulg.googlemaps.js"></script>
+		
+<script type="text/javascript">
+  $(document).ready(function() {
+	  LoadGoogleMaps('DisplayVenueMap');
+  });
+  </script>		
+}

@@ -1,0 +1,39 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+
+@{
+    
+    if ( Model.Content.HasProperty("serviceAlert") && Model.Content.HasValue("serviceAlert"))
+    {
+        @*
+            when we have service alerts they are stored as a string of comma seperated ids
+            so we split the string, then use the umbraco libraries to get a collection
+            of nodes for each valid (and visible) service id
+        *@
+    
+        string serviceAlerts = Model.Content.GetPropertyValue<string>("serviceAlert");
+
+        var ids = serviceAlerts.Split(new char[] { ',' }, StringSplitOptions.RemoveEmptyEntries)
+            .Select(x => int.Parse(x));
+
+        var serviceAlertNodes = Umbraco.TypedContent(ids).Where(x => x != null && x.IsVisible());
+        
+        if ( serviceAlerts.Any() )
+        {
+            foreach( var alert in serviceAlertNodes.Where(x => x.IsVisible()))
+            {
+                string alertType = alert.GetPropertyValue<string>("alertType");
+
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <div class="servicealert alert alert-@alertType">
+                                    <h1>@alert.GetPropertyValue("title")</h1>
+                                    @Html.Raw(alert.GetPropertyValue<string>("bodyText"))
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        }
+    }
+}

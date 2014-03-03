@@ -1,0 +1,11 @@
+﻿<div ng-controller="GMaps.GoogleMapsController" class="umb-editor umb-googlemaps">
+    <div>
+        <input type="text" id="{{model.alias}}_lookup" class="umb-editor umb-textstring textstring"/>
+    </div>
+    <div>
+        <div style="height: 400px;" id="{{model.alias}}_map"></div>
+    </div>
+    <div>
+        <div class="alert alert-success"><strong>Location :</strong>{{formattedAddress}}</div>
+    </div>
+</div>

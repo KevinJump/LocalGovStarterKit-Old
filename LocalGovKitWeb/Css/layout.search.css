@@ -1,0 +1,25 @@
+/*
+ search results 
+*/
+
+ol.search-results 
+{
+	list-style: none; 
+	padding-left:0;
+}
+
+ol.search-results>li>h3 
+{
+	margin-bottom: 0;
+	padding-bottom: 0;
+}
+
+ol.search-results>li>h3>a {
+	text-decration: underline;
+}
+
+ol.search-results .search-meta 
+{
+	font-size: 75%;
+	color: darkgreen;
+}

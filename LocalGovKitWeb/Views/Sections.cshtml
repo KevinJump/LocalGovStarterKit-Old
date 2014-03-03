@@ -1,0 +1,27 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@{
+    Layout = "SiteDesign.cshtml";
+}
+
+@section Metadata {
+    @RenderSection("Metadata", false)  
+}
+
+@section Breadcrumb {
+    <!-- no breadcrumb here -->
+}
+
+@section PageHeader {
+	@RenderSection("PageHeader", false)
+}
+
+@RenderBody()
+
+@section Footer {
+    @RenderSection("Footer", false)
+}
+
+@section Scripts {
+    @RenderSection("Scripts", false)
+
+}

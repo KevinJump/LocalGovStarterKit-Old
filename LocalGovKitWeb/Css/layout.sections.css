@@ -1,0 +1,53 @@
+
+.featured .thumbnail { 
+	border: none;
+	min-height: 400px;
+}
+
+.featured .thumbnail:hover { 
+	background-color: #eee;	
+}
+	
+.featured .thumbnail>img {
+	height: 198px;
+}
+
+
+.featured .more-link
+{
+	position: absolute;
+	bottom: 1em;
+	right: 1em;;
+}
+
+.site-highlights {
+    background: #222;
+    color: #eee;
+	margin-bottom: 1.5em;
+}
+
+.site-highlights h2 {
+    border-bottom: 3px solid #00AB93;
+    padding: 0.2em 0.5em 0.2em;
+    margin-bottom: 0em;
+}
+
+.site-highlights ul {
+    list-style: none;
+    padding: 0.5em 1em
+}
+
+.site-highlights a {
+    color: #fff;
+}
+
+.homepage-header {
+	margin-top: -40px;
+	padding-top: 40px;
+	background: #00AB93;
+	margin-bottom: 1em;
+	color: #fff;
+}
+
+
+/* EDITOR PROPERTIES - PLEASE DON'T DELETE THIS LINE TO AVOID DUPLICATE PROPERTIES */

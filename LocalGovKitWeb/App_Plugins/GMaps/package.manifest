@@ -1,0 +1,17 @@
+﻿{
+  propertyEditors:
+  [ 
+    {
+      alias: "Netaddicts.GMaps",
+      name: "Google Maps w/ Google Places Autocomplete lookup",
+      editor:  
+      {
+        view: "~/App_Plugins/GMaps/GMaps.html"
+      } 
+    } 
+  ],
+  javascript:  
+  [
+    "~/App_Plugins/GMaps/GMaps.controller.js"
+  ]
+}
