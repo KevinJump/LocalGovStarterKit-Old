@@ -1,17 +1,24 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@using ClientDependency.Core.Mvc;
 @{
     Layout = "MasterView.cshtml";
+	
+	@* you do this for speed>
+    Html.RequiresCss("~/Css/layout.css");
+	Html.RequiresCss("~/Css/" + @Umbraco.Field("sectionStyle", recursive: true)); 
+    *@
 }
 
 @section Styles {
 
 	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/css/layout.css" type="text/css" />
-    @Umbraco.Field(
-        "sectionStyle", 
-        recursive:true,
-        insertBefore: "&lt;link rel=@quot;stylesheet&quot; href=&quot;/css/",
-        insertAfter: "&quot;&gt;")
+	@Html.RenderCssHere() 
+	
+	@* you do this so you can actually debug *@
+	<link href="/css/layout.css" rel="stylesheet" type="text/css">
+	<link href="/css/@Umbraco.Field("sectionStyle", recursive: true)" rel="stylesheet" type="text/css">
+		
+		
 	@RenderSection("Styles", false) 
 }
 
