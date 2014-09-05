@@ -24,6 +24,7 @@
     background: #222;
     color: #eee;
 	margin-bottom: 1.5em;
+	opacity: 0.9;
 }
 
 .site-highlights h2 {
@@ -47,6 +48,8 @@
 	background: #00AB93;
 	margin-bottom: 1em;
 	color: #fff;
+	background-image: url('../img/banner.png') ;
+
 }
 
 
