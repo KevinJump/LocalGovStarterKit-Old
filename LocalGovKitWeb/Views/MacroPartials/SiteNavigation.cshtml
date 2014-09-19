@@ -1,0 +1,30 @@
+﻿@inherits Umbraco.Web.Macros.PartialViewMacroPage
+
+@{
+    Dictionary<string, string> tabs = new Dictionary<string, string>();
+    
+    var root = Model.Content.AncestorOrSelf(1);
+
+    tabs.Add("/", root.GetPropertyValue("sectionName").ToString());
+    
+    string url = Model.Content.Url ;
+    string currentRoot = url.Substring(0, url.IndexOf('/', 1) + 1);
+
+    foreach (var node in root.Children().Where(x => x.IsVisible() && x.DocumentTypeAlias == "SectionHomepage"))
+    {
+        tabs.Add(node.Url, node.GetPropertyValue("sectionName").ToString());
+    }
+    
+    if( !tabs.ContainsKey(currentRoot))
+    {
+        currentRoot = "/"; 
+    }
+}
+
+@foreach(KeyValuePair<string, string> node in tabs)
+{
+    <li class="@( node.Key.CompareTo(currentRoot) == 0 ? "active" : "")">
+        <a href="@node.Key" class="@node.Key.Trim('/')">@node.Value</a>
+    </li>   
+}
+    
