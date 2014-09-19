@@ -38,6 +38,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Jumoo.uSync.Core">
+      <HintPath>..\..\..\uSync\Jumoo.uSync\Jumoo.uSync.Core\bin\Release\Jumoo.uSync.Core.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -56,7 +59,7 @@
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
     <Reference Include="Umbraco.Core">
-      <HintPath>..\..\..\..\Web\Umbraco\DevUmbraco7.1.0\bin\Umbraco.Core.dll</HintPath>
+      <HintPath>..\..\..\uSync\Jumoo.uSync\References\7.1.6\Umbraco.Core.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -75,6 +78,7 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BasicNavParser.cs" />
     <Compile Include="esdNabParser.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

@@ -13,6 +13,15 @@ namespace jumoo.NavMaker {
     public partial class jumooNavMaker {
         
         /// <summary>
+        /// btnExample control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnExample;
+        
+        /// <summary>
         /// btnLGNL control.
         /// </summary>
         /// <remarks>
