@@ -31,24 +31,16 @@
 }
 			
 <div class="homepage-links">
-@Html.Partial(
-            "SectionPageBlock", 
-            Model.Content, 
-            new ViewDataDictionary()
-            {
-                { "mainCount", 6 },
-				{ "mainName", "" }
-            }
-)
+    @Umbraco.RenderMacro("SectionLinkBlock", new { mainCount = 6, mainName = "" })
 </div>
 	
 <div class="row featured">
 	<div class="col-md-6">
-		@Html.Partial("HomepageNews") 
+        @Umbraco.RenderMacro("HomepageNews")
 	</div>
 
 	<div class="col-md-6">
-		@Html.Partial("HomepageEvents") 
+		@Umbraco.RenderMacro("HomepageEvents")
 	</div>
 </div>
 

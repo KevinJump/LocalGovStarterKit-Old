@@ -1,0 +1,93 @@
+﻿@inherits Umbraco.Web.Macros.PartialViewMacroPage
+
+@* builds the "straight to" and "More" links on landing pages *@
+@{
+    int mainCount = 6;
+    string mainName = umbraco.library.GetDictionaryItem("MainSection");
+    string moreName = umbraco.library.GetDictionaryItem("MoreSection");
+
+    @* overrides - can be passed in the viewdata *@
+    
+    
+    if ( @Model.MacroParameters.ContainsKey("mainCount") )
+    {
+        mainCount = int.Parse(Model.MacroParameters["mainCount"].ToString());
+    }
+
+    if ( Model.MacroParameters.ContainsKey("mainName") )
+    {
+        mainName = (string)Model.MacroParameters["mainName"];
+    }
+    
+    if ( Model.MacroParameters.ContainsKey("moreName"))
+    {
+        moreName = Model.MacroParameters["moreName"].ToString(); 
+    }
+
+    var nodes = Model.Content.Children.Where(x => x.IsVisible() && x.DocumentTypeAlias != "SectionHomepage");
+}
+@if (!string.IsNullOrEmpty(mainName))
+{
+    <div class="row">
+        <div class="col-xs-12">
+            <h2>@mainName</h2>
+        </div>
+    </div>
+}
+<div class="row">
+    @foreach (var node in nodes.Take(mainCount))
+    {
+        <div class="col-lg-4 col-md-6">
+            <div class="landing-item">
+                <div class="landing-title">
+                    <h3><a href="@node.Url">@node.GetPropertyValue("title")</a></h3>
+                </div>
+                <ul class="section-list">
+                    @{
+        var childNodes = node.Children.Where(x => x.IsVisible());
+        var childNodeCount = 0;
+
+        foreach (var childNode in childNodes.Take(5))
+        {
+            childNodeCount++;
+            <li>
+                <a href="@childNode.Url">@childNode.GetPropertyValue("title")</a>
+                @if (childNodeCount < @childNodes.Count())
+                {
+                    @Html.Raw("|")
+                }
+            </li>
+        }
+        if (childNodes.Count() > 5)
+        {
+            <li class="section-more-link"><a href="@node.Url">More...</a></li>
+        }
+                    }
+                </ul>
+            </div>
+        </div>
+    }
+</div>
+@* if there are more child nodes than the main count - we have a 'more' list *@
+@if (nodes.Count() > mainCount)
+{
+    if (!string.IsNullOrEmpty(moreName))
+    {
+        <div class="row landing-more">
+            <div class="col-xs-12">
+                <h2>@moreName</h2>
+            </div>
+        </div>
+    }
+
+    <div class="row">
+        <div class="col-xs-12">
+            <ul class="nav nav-pills landing-more">
+                @foreach (var node in nodes.Skip(mainCount))
+                {
+                    <li><a href="@node.Url">@node.GetPropertyValue("title")</a></li>
+                }
+            </ul>
+        </div>
+    </div>
+}
