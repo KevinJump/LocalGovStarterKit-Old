@@ -13,11 +13,11 @@ namespace jumoo.NavMaker
     {
         public static string lgnl = "~/app_data/temp/lgNav/englishAndWelshServices.xml";
         public static string sgnl = "~/app_data/temp/lgNav/scottishServices.xml";
-        public static string examples = "~/app_data/temp/lgNav/examples";
+        public static string examples = "~/app_data/temp/lgNav/examples.xml";
     }
     /// <summary>
     ///  looks in the /app_data/nav folder of an umbraco install and attempts to build
-    ///  navigation based on teh files - mainly for importing LGNL structures into a starterkit
+    ///  navigation based on the files - mainly for importing LGNL structures into a starterkit
     /// </summary>
     public partial class jumooNavMaker : System.Web.UI.UserControl
     {
@@ -74,7 +74,12 @@ namespace jumoo.NavMaker
         protected void btnExample_Click(object sender, EventArgs e)
         {
             BasicNavParser basicImport = new BasicNavParser();
-            basicImport.ImportNavigation(NavPaths.examples);
+            int count = basicImport.ImportNavigation(NavPaths.examples);
+
+            navstatus.Text =
+                string.Format("Import Completed... {0} pages created", count);
+
+            // basicImport.MakeExampleContent(1073, NavPaths.examples);
         }
     }
 }

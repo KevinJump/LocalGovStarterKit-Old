@@ -40,37 +40,96 @@ namespace jumoo.NavMaker
                 return -1;
 
             //
-            // Import structure 
+            // Look and see if the root node already exists for the content we want to import...
             // 
-            
-            foreach(var node in navigation.Elements("ContentType"))
+            var _contentService = ApplicationContext.Current.Services.ContentService;
+            var rootContent = _contentService.GetRootContent();
+
+            if ( rootContent.Any() )
             {
-                ImportContentNode(node, -1);
+                var homenode = rootContent.Where(x => x.Name == navigation.Name.LocalName).FirstOrDefault();
+
+                if (homenode != null)
+                {
+                    // we set the guid of our import to whatever the guid is of the root.
+                    // that way when usync.core imports it - it will find it and treat it 
+                    // as an existing node :) 
+                    navigation.Attribute("guid").Value = homenode.Key.ToString();
+                    LogHelper.Info<BasicNavParser>("Setting Root Node Guid {0}", () => homenode.Key.ToString());
+                }
             }
 
+            ImportContentNode(navigation, -1);
 
             return importCount;
         }
 
         private void ImportContentNode(XElement node, int parentId)
         {
-            var content = uSyncCore.Content.Import(node);
+            LogHelper.Info<BasicNavParser>("Importing {0} - {1}", ()=> node.Name.ToString(), ()=> parentId);
+            var content = uSyncCore.Content.Import(node, false, parentId);
 
             if (content != null)
             {
                 importCount++;
+                LogHelper.Info<BasicNavParser>("Imported {0} with id {1}", () => content.Name, () => content.Id);
 
                 if (node.Element("Children") != null)
                 {
                     var children = node.Element("Children");
 
                     // get all the children...
-                    foreach (var child in children.Elements("ContentType"))
+                    foreach (var child in children.Elements())
                     {
-                        ImportContentNode(child, content.Id);
+                        if ( child.Name != "Children") 
+                            ImportContentNode(child, content.Id);
                     }
                 }
             }
+        }
+
+        public void MakeExampleContent(int ParentNode, string filename)
+        {
+            var _contentService = ApplicationContext.Current.Services.ContentService;
+
+            var parent = _contentService.GetById(ParentNode);
+
+            if ( parent != null )
+            {
+                XElement allContent = ExportContent(parent);
+
+                var savePath = IOHelper.MapPath(filename);
+                if (System.IO.File.Exists(savePath))
+                    System.IO.File.Delete(savePath);
+
+                allContent.Save(savePath);
+            }
+
+        }
+
+        private XElement ExportContent(IContent item)
+        {
+            LogHelper.Info<BasicNavParser>("Exporting {0}", () => item.Name);
+
+            var node = uSyncCore.Content.Export(item);
+
+
+            if (item.Children().Count() > 0)
+            {
+                var childHolder = new XElement("Children");
+
+                foreach (var child in item.Children())
+                {
+                    var childNode = ExportContent(child);
+
+                    childHolder.Add(childNode);
+                }
+
+                node.Add(childHolder);
+            }
+
+            return node;
+
         }
 
 

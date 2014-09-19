@@ -38,7 +38,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Jumoo.uSync.Core">
+    <Reference Include="Jumoo.uSync.Core, Version=3.0.5375.37695, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\uSync\Jumoo.uSync\Jumoo.uSync.Core\bin\Release\Jumoo.uSync.Core.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />

@@ -48,7 +48,7 @@
 
         <ul class="unstyled">
             <li>
-                <asp:Button ID="btnExample" runat="server" Text="Install the Example Content" CssClass="btn btn-inverse btn-large navparser_btn" Enabled="false" OnClick="btnExample_Click" />
+                <asp:Button ID="btnExample" runat="server" Text="Install the Example Content" CssClass="btn btn-inverse btn-large navparser_btn" Enabled="true" OnClick="btnExample_Click" />
             </li>
         </ul>
     </div>
