@@ -6,6 +6,13 @@
 {
 	margin-bottom: 1.2em;
 	min-height: 190px;
+	padding: 0.4em;
+	margin: 0 -0.4em 1.2em;	
+}
+
+.landing-item:hover {
+    background-color: #eee;
+
 }
 
 a.landing-link {
@@ -15,7 +22,6 @@ a.landing-link {
 }
 
 a.landing-link:hover {
-    background-color: #eee;
 }
 
 .landing-title {

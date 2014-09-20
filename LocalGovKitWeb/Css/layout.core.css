@@ -7,7 +7,7 @@ body
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Open Sans', Verdana, Helvetica, sans-serif;
+	font-family: 'Ubuntu', 'Open Sans', Verdana, Helvetica, sans-serif;
 	font-weight: 800;	
 }
 
@@ -22,4 +22,9 @@ h1, h2, h3, h4, h5, h6 {
 {
 	border-radius: 0;
 }
-/* EDITOR PROPERTIES - PLEASE DON'T DELETE THIS LINE TO AVOID DUPLICATE PROPERTIES */
+
+
+.jumoo { 
+		font-family: 'pacifico' ;
+		font-weight: 700;
+	}/* EDITOR PROPERTIES - PLEASE DON'T DELETE THIS LINE TO AVOID DUPLICATE PROPERTIES */

@@ -10,43 +10,52 @@
 namespace jumoo.NavMaker {
     
     
-    public partial class jumooNavMaker {
+    public partial class LocalGovKit {
         
         /// <summary>
-        /// btnExample control.
+        /// btnExampleContent control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnExample;
+        protected global::System.Web.UI.WebControls.Button btnExampleContent;
         
         /// <summary>
-        /// btnExport control.
+        /// btnNavLGNL control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnExport;
+        protected global::System.Web.UI.WebControls.Button btnNavLGNL;
         
         /// <summary>
-        /// btnLGNL control.
+        /// btnNavSGNL control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnLGNL;
+        protected global::System.Web.UI.WebControls.Button btnNavSGNL;
         
         /// <summary>
-        /// btnSGNL control.
+        /// btnNavLiv control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSGNL;
+        protected global::System.Web.UI.WebControls.Button btnNavLiv;
+        
+        /// <summary>
+        /// btnNavEdin control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnNavEdin;
         
         /// <summary>
         /// navstatus control.

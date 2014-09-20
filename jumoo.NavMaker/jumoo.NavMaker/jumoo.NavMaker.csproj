@@ -74,6 +74,7 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="jumooNavMaker.ascx" />
+    <Content Include="LocalGovKit.ascx" />
     <Content Include="Nav\navigation_englishAndWelshServices.xml" />
     <Content Include="Nav\navigation_scottishServices.xml" />
     <Content Include="Web.config" />
@@ -90,6 +91,13 @@
     </Compile>
     <Compile Include="jumooNavMaker.ascx.designer.cs">
       <DependentUpon>jumooNavMaker.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="LocalGovKit.ascx.cs">
+      <DependentUpon>LocalGovKit.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LocalGovKit.ascx.designer.cs">
+      <DependentUpon>LocalGovKit.ascx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -125,7 +133,9 @@
   <PropertyGroup>
     <PostBuildEvent>@XCOPY "$(TargetPath)" "D:\Development\OpenSource\LocalGovStarterKit\LocalGovKitWeb\Bin\" /y /i /q
 @XCOPY "$(ProjectDir)Nav\*.*" "D:\Development\OpenSource\LocalGovStarterKit\LocalGovKitWeb\Nav\" /y /i /q
-@XCOPY "$(ProjectDir)*.ascx" "D:\Development\OpenSource\LocalGovStarterKit\LocalGovKitWeb\Umbraco\Plugins\NavMaker\" /y /i /q
+@XCOPY "$(ProjectDir)*.ascx" "D:\Development\OpenSource\LocalGovStarterKit\LocalGovKitWeb\Umbraco\Plugins\LocalGovKit\" /y /i /q
+
+@XCOPY "$(TargetDir)jumoo.usync.core.dll" "D:\Development\OpenSource\LocalGovStarterKit\LocalGovKitWeb\Bin\" /y /i /q
 
 </PostBuildEvent>
   </PropertyGroup>

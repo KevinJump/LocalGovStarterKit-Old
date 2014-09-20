@@ -59,8 +59,13 @@ namespace jumoo.NavMaker
             {
                 if (node.Name.ToLower() == "localgov home" )
                 {
-                    parent = node.Id ; 
+                    parent = node.Id ;
+                    break;
                 }
+
+                // just get the node id of what ever is there..
+                parent = node.Id;
+                break;
             }
 
             if (parent != -1)

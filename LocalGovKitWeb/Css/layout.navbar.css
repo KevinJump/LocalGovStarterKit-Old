@@ -11,6 +11,7 @@
 .navbar-default .navbar-brand {
     color: #fff;
 	border-right: 2px solid #C54611;
+	font-weight: 700;
 }
 .navbar-default .navbar-nav>li>a {
     color: #ddd;

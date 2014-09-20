@@ -13,6 +13,8 @@ namespace jumoo.NavMaker
     {
         public static string lgnl = "~/app_data/temp/lgNav/englishAndWelshServices.xml";
         public static string sgnl = "~/app_data/temp/lgNav/scottishServices.xml";
+        public static string liv = "~/app_data/temp/lgNav/liverpool.xml";
+        public static string edin = "~/app_data/temp/lgNav/edinburgh.xml";
         public static string examples = "~/app_data/temp/lgNav/examples.xml";
     }
     /// <summary>
@@ -21,6 +23,11 @@ namespace jumoo.NavMaker
     /// </summary>
     public partial class jumooNavMaker : System.Web.UI.UserControl
     {
+
+        private bool exampleImport = false;
+        private bool lgnlimport = false;
+        private bool sgnlimport = false;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!IsPostBack)
@@ -31,7 +38,7 @@ namespace jumoo.NavMaker
                 if (File.Exists(Request.MapPath(NavPaths.sgnl)))
                     btnSGNL.Enabled = true;
 
-                if (File.Exists(Request.MapPath(NavPaths.examples)))
+                if ( !exampleImport && File.Exists(Request.MapPath(NavPaths.examples)))
                     btnExample.Enabled = true;
             }
 
@@ -80,6 +87,18 @@ namespace jumoo.NavMaker
                 string.Format("Import Completed... {0} pages created", count);
 
             // basicImport.MakeExampleContent(1073, NavPaths.examples);
+            exampleImport = true;
+        }
+
+        protected void btnExport_Click(object sender, EventArgs e)
+        {
+            BasicNavParser basicImport = new BasicNavParser();
+            basicImport.MakeExampleContent(1073, NavPaths.examples);
+
+            navstatus.Text =
+                string.Format("Exported Content");
+
+
         }
     }
 }
