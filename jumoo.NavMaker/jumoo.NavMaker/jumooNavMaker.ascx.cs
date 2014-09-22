@@ -97,8 +97,6 @@ namespace jumoo.NavMaker
 
             navstatus.Text =
                 string.Format("Exported Content");
-
-
         }
     }
 }
