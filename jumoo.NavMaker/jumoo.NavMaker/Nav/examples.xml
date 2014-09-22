@@ -1,0 +1,584 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Homepage guid="aa44f90f-9280-41b5-8756-d1c5bb27c860" id="1073" nodeName="LocalGov Home" isDoc="" updated="2014-09-20T16:04:19.877Z" parentGUID="00000000-0000-0000-0000-000000000000" nodeTypeAlias="Homepage" templateAlias="Homepage" sortOrder="0" published="true">
+  <umbracoNaviHide>0</umbracoNaviHide>
+  <title><![CDATA[LocalGov Starter Kit]]></title>
+  <bodyText><![CDATA[<p>Welcome to the localgov starter kit for <a href="http://www.umbraco.com">umbraco</a>. This site lets you explore all the features of the starter kit, With the kit you can quickly understand and build your own site in no time.</p>]]></bodyText>
+  <metaSubject><![CDATA[umbraco, starterkit]]></metaSubject>
+  <metaRobots></metaRobots>
+  <serviceAlert></serviceAlert>
+  <landingSummary></landingSummary>
+  <esdServiceId></esdServiceId>
+  <sectionName><![CDATA[Residents]]></sectionName>
+  <sectionStyle><![CDATA[residents.css]]></sectionStyle>
+  <siteName><![CDATA[LocalGov StarterKit]]></siteName>
+  <analyticsCode></analyticsCode>
+  <metaCreator><![CDATA[Jumoo Limited]]></metaCreator>
+  <metaPublisher><![CDATA[Jumoo Limited]]></metaPublisher>
+  <Children>
+    <LandingPage guid="b5c8898e-c29b-4d75-aa8e-89e0f54b0091" id="1254" nodeName="Example" isDoc="" updated="2014-04-03T22:54:16.85Z" parentGUID="aa44f90f-9280-41b5-8756-d1c5bb27c860" nodeTypeAlias="LandingPage" templateAlias="LandingPage" sortOrder="0" published="true">
+      <umbracoNaviHide>0</umbracoNaviHide>
+      <title><![CDATA[Examples]]></title>
+      <bodyText><![CDATA[<p>Some example content for site features not created during navigation import</p>]]></bodyText>
+      <metaSubject></metaSubject>
+      <metaRobots></metaRobots>
+      <serviceAlert></serviceAlert>
+      <landingSummary></landingSummary>
+      <esdServiceId></esdServiceId>
+      <Children>
+        <VenueLandingPage guid="a0b8224f-44fa-4a5f-9306-72fc3197296f" id="1219" nodeName="Libraries" isDoc="" updated="2014-04-03T22:48:42.5Z" parentGUID="b5c8898e-c29b-4d75-aa8e-89e0f54b0091" nodeTypeAlias="VenueLandingPage" templateAlias="VenueLandingPage" sortOrder="1" published="true">
+          <umbracoNaviHide>0</umbracoNaviHide>
+          <title><![CDATA[Libraries]]></title>
+          <bodyText><![CDATA[<p>A page all about our libraries and what you can do in them.</p>]]></bodyText>
+          <metaSubject></metaSubject>
+          <metaRobots></metaRobots>
+          <serviceAlert></serviceAlert>
+          <landingSummary><![CDATA[Find and join the libraries, borrow books and find things out]]></landingSummary>
+          <esdServiceId><![CDATA[437]]></esdServiceId>
+          <Children>
+            <VenuePage guid="9e80eb9a-f3be-45f3-aec0-861c20905999" id="1246" nodeName="A Smaller library" isDoc="" updated="2014-04-03T22:48:43.097Z" parentGUID="a0b8224f-44fa-4a5f-9306-72fc3197296f" nodeTypeAlias="VenuePage" templateAlias="VenuePage" sortOrder="2" published="true">
+              <umbracoNaviHide>0</umbracoNaviHide>
+              <title><![CDATA[A smaller library]]></title>
+              <bodyText><![CDATA[<p>this is a small library which isn't as big as the big library but is still nice and it has books. not open on a wednesday</p>]]></bodyText>
+              <metaSubject></metaSubject>
+              <metaRobots></metaRobots>
+              <serviceAlert></serviceAlert>
+              <landingSummary></landingSummary>
+              <esdServiceId></esdServiceId>
+              <venueAddress><![CDATA[Goodson Road, Liverpool]]></venueAddress>
+              <venueLocation><![CDATA[53.4405005,-2.967901799999936]]></venueLocation>
+              <venueType></venueType>
+              <openingTimes><![CDATA[[
+  {
+    "name": "Monday",
+    "scheduled": true,
+    "open": "09:45",
+    "close": "17:30",
+    "open2": "",
+    "close2": ""
+  },
+  {
+    "name": "Tuesday",
+    "scheduled": true,
+    "open": "09:45",
+    "close": "17:30",
+    "open2": "",
+    "close2": ""
+  },
+  {
+    "name": "Wednesday",
+    "scheduled": false,
+    "open": "09:45",
+    "close": "17:30",
+    "open2": "",
+    "close2": ""
+  },
+  {
+    "name": "Thursday",
+    "scheduled": true,
+    "open": "09:45",
+    "close": "17:30",
+    "open2": "",
+    "close2": ""
+  },
+  {
+    "name": "Friday",
+    "scheduled": true,
+    "open": "09:45",
+    "close": "17:30",
+    "open2": "",
+    "close2": ""
+  },
+  {
+    "name": "Saturday",
+    "scheduled": false,
+    "open": "09:45",
+    "close": "17:30",
+    "open2": "",
+    "close2": ""
+  },
+  {
+    "name": "Sunday",
+    "scheduled": false,
+    "open": "09:45",
+    "close": "17:30",
+    "open2": "",
+    "close2": ""
+  }
+]]]></openingTimes>
+            </VenuePage>
+            <VenuePage guid="e1254296-752a-442c-9a18-337e5309131a" id="1217" nodeName="Big Library" isDoc="" updated="2014-04-03T22:48:43.32Z" parentGUID="a0b8224f-44fa-4a5f-9306-72fc3197296f" nodeTypeAlias="VenuePage" templateAlias="VenuePage" sortOrder="3" published="true">
+              <umbracoNaviHide>0</umbracoNaviHide>
+              <title><![CDATA[Big library]]></title>
+              <bodyText><![CDATA[<p>Everyone has one library that is bigger than the rest, this is ours, set in the wonderful bit of space that it is, it has books and computers and some books too.</p>]]></bodyText>
+              <metaSubject></metaSubject>
+              <metaRobots></metaRobots>
+              <serviceAlert></serviceAlert>
+              <landingSummary><![CDATA[The big library in the best place]]></landingSummary>
+              <esdServiceId></esdServiceId>
+              <venueAddress><![CDATA[Woodchurch Lane, Birkenhead, Merseyside]]></venueAddress>
+              <venueLocation><![CDATA[53.37343017513222,-3.033656576721228]]></venueLocation>
+              <venueType><![CDATA[Library]]></venueType>
+              <openingTimes><![CDATA[[
+  {
+    "name": "Monday",
+    "scheduled": true,
+    "open": "08:30",
+    "close": "18:00",
+    "open2": "",
+    "close2": ""
+  },
+  {
+    "name": "Tuesday",
+    "scheduled": true,
+    "open": "08:30",
+    "close": "18:00",
+    "open2": "",
+    "close2": ""
+  },
+  {
+    "name": "Wednesday",
+    "scheduled": true,
+    "open": "08:30",
+    "close": "18:00",
+    "open2": "",
+    "close2": ""
+  },
+  {
+    "name": "Thursday",
+    "scheduled": true,
+    "open": "08:30",
+    "close": "18:00",
+    "open2": "",
+    "close2": ""
+  },
+  {
+    "name": "Friday",
+    "scheduled": true,
+    "open": "08:30",
+    "close": "18:00",
+    "open2": "",
+    "close2": ""
+  },
+  {
+    "name": "Saturday",
+    "scheduled": true,
+    "open": "08:30",
+    "close": "18:00",
+    "open2": "",
+    "close2": ""
+  },
+  {
+    "name": "Sunday",
+    "scheduled": false,
+    "open": "08:30",
+    "close": "18:00",
+    "open2": "",
+    "close2": ""
+  }
+]]]></openingTimes>
+            </VenuePage>
+          </Children>
+        </VenueLandingPage>
+        <LandingPage guid="6000e57a-0049-4fdf-96d0-fec7e520bb13" id="1119" nodeName="Council publications" isDoc="" updated="2014-04-03T22:50:35.82Z" parentGUID="b5c8898e-c29b-4d75-aa8e-89e0f54b0091" nodeTypeAlias="LandingPage" templateAlias="LandingPage" sortOrder="2" published="true">
+          <umbracoNaviHide>0</umbracoNaviHide>
+          <title><![CDATA[Council publications]]></title>
+          <bodyText></bodyText>
+          <metaSubject></metaSubject>
+          <metaRobots></metaRobots>
+          <serviceAlert></serviceAlert>
+          <landingSummary></landingSummary>
+          <esdServiceId></esdServiceId>
+          <Children>
+            <ListingsPage guid="c1b83208-d50b-495c-914d-f4debdc5091e" id="1196" nodeName="News and Information" isDoc="" updated="2014-04-03T22:50:36.073Z" parentGUID="6000e57a-0049-4fdf-96d0-fec7e520bb13" nodeTypeAlias="ListingsPage" templateAlias="ListingsPage" sortOrder="2" published="true">
+              <umbracoNaviHide>0</umbracoNaviHide>
+              <title><![CDATA[News and Information]]></title>
+              <bodyText><![CDATA[<p>This is where the council news sits on the site.&nbsp;</p>]]></bodyText>
+              <metaSubject></metaSubject>
+              <metaRobots></metaRobots>
+              <serviceAlert></serviceAlert>
+              <landingSummary></landingSummary>
+              <esdServiceId></esdServiceId>
+              <Children>
+                <NewsItem guid="a2c6aa37-c354-4faf-85ea-7286fc16d05b" id="1197" nodeName="No News News" isDoc="" updated="2014-04-03T22:50:36.303Z" parentGUID="c1b83208-d50b-495c-914d-f4debdc5091e" nodeTypeAlias="NewsItem" templateAlias="NewsItem" sortOrder="2" published="true">
+                  <umbracoNaviHide>0</umbracoNaviHide>
+                  <title><![CDATA[No News is good news]]></title>
+                  <bodyText><![CDATA[<p>this is a news item, it is not really much news, but it is an item in the news section so that the news page can list it.</p>]]></bodyText>
+                  <metaSubject></metaSubject>
+                  <metaRobots></metaRobots>
+                  <serviceAlert></serviceAlert>
+                  <landingSummary></landingSummary>
+                  <esdServiceId></esdServiceId>
+                  <publishedDate>2014-02-27T00:00:00</publishedDate>
+                  <newsSummary><![CDATA[News about the lack of news, so that there can be some news to put on the homepage of the site.]]></newsSummary>
+                </NewsItem>
+              </Children>
+            </ListingsPage>
+          </Children>
+        </LandingPage>
+        <ListingsPage guid="d7b535bf-1f86-4e0f-8578-ad8ab4d985f6" id="1200" nodeName="Events" isDoc="" updated="2014-04-03T22:51:28.397Z" parentGUID="b5c8898e-c29b-4d75-aa8e-89e0f54b0091" nodeTypeAlias="ListingsPage" templateAlias="ListingsPage" sortOrder="3" published="true">
+          <umbracoNaviHide>0</umbracoNaviHide>
+          <title><![CDATA[Events]]></title>
+          <bodyText><![CDATA[<p>upcoming events, and things that may or mayno be happening&nbsp;</p>]]></bodyText>
+          <metaSubject></metaSubject>
+          <metaRobots></metaRobots>
+          <serviceAlert></serviceAlert>
+          <landingSummary></landingSummary>
+          <esdServiceId></esdServiceId>
+          <Children>
+            <EventItem guid="db34d4cd-f167-4d45-ae70-225c5dc17339" id="1201" nodeName="Free Circus" isDoc="" updated="2014-04-03T22:51:28.693Z" parentGUID="d7b535bf-1f86-4e0f-8578-ad8ab4d985f6" nodeTypeAlias="EventItem" templateAlias="EventItem" sortOrder="2" published="true">
+              <umbracoNaviHide>0</umbracoNaviHide>
+              <title><![CDATA[Free circus]]></title>
+              <bodyText><![CDATA[<p>there is a circus in town, and it's not going to cost anything, because it's not very good</p>]]></bodyText>
+              <metaSubject></metaSubject>
+              <metaRobots></metaRobots>
+              <serviceAlert></serviceAlert>
+              <landingSummary></landingSummary>
+              <esdServiceId></esdServiceId>
+              <eventStart>2014-02-20T15:05:27</eventStart>
+              <eventEnd>2014-03-20T15:05:27</eventEnd>
+              <eventSummary><![CDATA[There is a circus in town, and it's not going to cost anything, because it's not very good]]></eventSummary>
+            </EventItem>
+            <EventItem guid="09e88412-73a6-4611-b89e-88a2623ff01f" id="1202" nodeName="City Marathon" isDoc="" updated="2014-04-03T22:51:28.947Z" parentGUID="d7b535bf-1f86-4e0f-8578-ad8ab4d985f6" nodeTypeAlias="EventItem" templateAlias="EventItem" sortOrder="3" published="true">
+              <umbracoNaviHide>0</umbracoNaviHide>
+              <title><![CDATA[City Marathon]]></title>
+              <bodyText><![CDATA[<p>People who like running, running while people who don't like running or do like running but arn't running watching the people who do like running run.</p>]]></bodyText>
+              <metaSubject></metaSubject>
+              <metaRobots></metaRobots>
+              <serviceAlert></serviceAlert>
+              <landingSummary></landingSummary>
+              <esdServiceId></esdServiceId>
+              <eventStart>2014-03-05T15:06:34</eventStart>
+              <eventEnd>2014-03-05T19:06:34</eventEnd>
+              <eventSummary><![CDATA[People will be running a marathon in a place for some time]]></eventSummary>
+            </EventItem>
+          </Children>
+        </ListingsPage>
+      </Children>
+    </LandingPage>
+    <LandingPage guid="1b33c80e-6999-4b27-b2a7-fef5593ae037" id="1089" nodeName="Contact Us" isDoc="" updated="2014-04-03T22:54:16.893Z" parentGUID="aa44f90f-9280-41b5-8756-d1c5bb27c860" nodeTypeAlias="LandingPage" templateAlias="LandingPage" sortOrder="1" published="true">
+      <umbracoNaviHide>0</umbracoNaviHide>
+      <title><![CDATA[Contact Us]]></title>
+      <bodyText><![CDATA[<p>A Landing page for all contact</p>]]></bodyText>
+      <metaSubject></metaSubject>
+      <metaRobots></metaRobots>
+      <serviceAlert></serviceAlert>
+      <landingSummary></landingSummary>
+      <esdServiceId></esdServiceId>
+      <Children>
+        <ContactPage guid="c8642eb2-7bb7-42c3-8958-123ebb51e7bb" id="1090" nodeName="Test Contact" isDoc="" updated="2014-02-03T17:45:42.943Z" parentGUID="1b33c80e-6999-4b27-b2a7-fef5593ae037" nodeTypeAlias="ContactPage" templateAlias="ContactPage" sortOrder="0" published="true">
+          <umbracoNaviHide>0</umbracoNaviHide>
+          <title><![CDATA[Contact Us - Test]]></title>
+          <bodyText><![CDATA[<p>The test contact us page</p>]]></bodyText>
+          <metaSubject></metaSubject>
+          <metaRobots></metaRobots>
+          <serviceAlert></serviceAlert>
+          <landingSummary><![CDATA[Some test contact details for testing contact pages]]></landingSummary>
+          <esdServiceId></esdServiceId>
+          <telephone><![CDATA[0151 232 9e357e4a-d78c-41da-bdbc-2bc980dd6381]]></telephone>
+          <emailAddress><![CDATA[info@jumoo.co.uk]]></emailAddress>
+          <address><![CDATA[123 Thiny Road, Liverpool, L69 1PQ]]></address>
+        </ContactPage>
+        <VenuePage guid="1672e268-ed63-42e7-ae2a-73fb64fdb013" id="1102" nodeName="Our Office" isDoc="" updated="2014-02-28T22:53:30.613Z" parentGUID="1b33c80e-6999-4b27-b2a7-fef5593ae037" nodeTypeAlias="VenuePage" templateAlias="VenuePage" sortOrder="1" published="true">
+          <umbracoNaviHide>0</umbracoNaviHide>
+          <title><![CDATA[Our Office]]></title>
+          <bodyText><![CDATA[<p>this is a venue page - it shows where we are - and when we are open</p>]]></bodyText>
+          <metaSubject></metaSubject>
+          <metaRobots></metaRobots>
+          <serviceAlert></serviceAlert>
+          <landingSummary><![CDATA[this is our office, and this is where we are, and when we are open]]></landingSummary>
+          <esdServiceId></esdServiceId>
+          <venueAddress><![CDATA[Hornby Road, Liverpool, L9 3DF]]></venueAddress>
+          <venueLocation><![CDATA[53.45660073896084,-2.9707459385009543]]></venueLocation>
+          <venueType><![CDATA[Library]]></venueType>
+          <openingTimes><![CDATA[[
+  {
+    "name": "Monday",
+    "scheduled": true,
+    "open": "09:00",
+    "close": "17:00",
+    "open2": "",
+    "close2": ""
+  },
+  {
+    "name": "Tuesday",
+    "scheduled": true,
+    "open": "09:00",
+    "close": "17:00",
+    "open2": "",
+    "close2": ""
+  },
+  {
+    "name": "Wednesday",
+    "scheduled": true,
+    "open": "09:00",
+    "close": "17:00",
+    "open2": "",
+    "close2": ""
+  },
+  {
+    "name": "Thursday",
+    "scheduled": true,
+    "open": "09:00",
+    "close": "17:00",
+    "open2": "",
+    "close2": ""
+  },
+  {
+    "name": "Friday",
+    "scheduled": true,
+    "open": "09:00",
+    "close": "17:00",
+    "open2": "",
+    "close2": ""
+  },
+  {
+    "name": "Saturday",
+    "scheduled": false,
+    "open": "09:00",
+    "close": "17:00",
+    "open2": "",
+    "close2": ""
+  },
+  {
+    "name": "Sunday",
+    "scheduled": false,
+    "open": "09:00",
+    "close": "17:00",
+    "open2": "",
+    "close2": ""
+  }
+]]]></openingTimes>
+        </VenuePage>
+      </Children>
+    </LandingPage>
+    <LandingPage guid="3faf5fc2-5b1e-499e-bea6-55a8e4b70964" id="1205" nodeName="Help" isDoc="" updated="2014-04-03T22:54:16.957Z" parentGUID="aa44f90f-9280-41b5-8756-d1c5bb27c860" nodeTypeAlias="LandingPage" templateAlias="LandingPage" sortOrder="2" published="true">
+      <umbracoNaviHide>1</umbracoNaviHide>
+      <title><![CDATA[Starterkit Help]]></title>
+      <bodyText><![CDATA[<p dir="ltr"><span>The local gov Starterkit for umbraco has been developed to give people an understanding of how they could use Umbraco to implement a local government website. </span></p>
+<p>&nbsp;</p>
+<p dir="ltr"><span>The kit contains all the core elements you need to get started, and a few you might not.</span></p>]]></bodyText>
+      <metaSubject></metaSubject>
+      <metaRobots></metaRobots>
+      <serviceAlert></serviceAlert>
+      <landingSummary></landingSummary>
+      <esdServiceId></esdServiceId>
+      <Children>
+        <ContentPage guid="9895da01-48df-40b8-a195-332618f8cde0" id="1250" nodeName="Page Templates" isDoc="" updated="2014-04-01T19:29:54.377Z" parentGUID="3faf5fc2-5b1e-499e-bea6-55a8e4b70964" nodeTypeAlias="ContentPage" templateAlias="StandardPage" sortOrder="0" published="true">
+          <umbracoNaviHide>0</umbracoNaviHide>
+          <title><![CDATA[Page Templates]]></title>
+          <bodyText><![CDATA[<p>Like all websites the starter kit is made up of pages, and each page does a diffrent thing.</p>
+<p>To make it easier to manage the kit has diffrent types of pages (or Templates) for diffrent things.</p>
+<h2>Core Templates&nbsp;</h2>
+<p>At the base of everything the Starter Kit uses some core templates. these core templates manage the overall site look and feel, and behavior. They contain the things that are on everypage.&nbsp;</p>
+<h3>Site Master&nbsp;</h3>
+<p>the site master is at the very top of the template tree, it contains the core html and css. As the starter kit uses Bootstrap for a foundation it is defined here.</p>
+<h3>Site Design</h3>
+<p>on top of the master comes the core design - the site design template defines the site menus, headers and footers.</p>
+<h3>Page Templates</h3>
+<p>beneath these core templates everything we then use for pages is defined. these templates match up to Document Types whcih in umbraco are used to say just what information is needed on each page.</p>
+<ul>
+<li>Contact Page</li>
+<li>Landing Page</li>
+<li>Sections
+<ul>
+<li>Homepage</li>
+<li>Section Homepage</li>
+</ul>
+</li>
+<li>Side Nav Pages
+<ul>
+<li>Event Item</li>
+<li>Listing Page</li>
+<li>News Item</li>
+<li>Standard Page</li>
+</ul>
+</li>
+<li>System Pages</li>
+<li>Venue Landing Page</li>
+<li>Venue Page</li>
+</ul>]]></bodyText>
+          <metaSubject></metaSubject>
+          <metaRobots></metaRobots>
+          <serviceAlert></serviceAlert>
+          <landingSummary><![CDATA[The templates allow you to quickly define how a certain type of page should look.]]></landingSummary>
+          <esdServiceId></esdServiceId>
+          <contactDetails></contactDetails>
+          <relatedItems><![CDATA[[]]]></relatedItems>
+        </ContentPage>
+        <ContentPage guid="c4842e74-5660-446e-97e6-d8838e0ae34c" id="1248" nodeName="Page types" isDoc="" updated="2014-04-01T20:14:52.887Z" parentGUID="3faf5fc2-5b1e-499e-bea6-55a8e4b70964" nodeTypeAlias="ContentPage" templateAlias="StandardPage" sortOrder="1" published="true">
+          <umbracoNaviHide>0</umbracoNaviHide>
+          <title><![CDATA[Pages Types]]></title>
+          <bodyText><![CDATA[<p>there are lots of diffrent types of page you can create with the starter kit, including pages for content, and navigation what each page is and what it is used for are detailed below:</p>
+<h2>Homepage</h2>
+<p><img style="float: right;" class="img-thumbnail" src="/img/screenshots/homepage.png" alt="" /></p>
+<p>the Homepage of the site - is where a lot of users will start, so it contains the upfront links to all the bits of the site someone might need. you will notice it doesn't list quick links or top tasks. you should build your whole site around the needs of the users then you don't need to say what is a top task.</p>
+<h2>Section Page</h2>
+<p>Sections allow you to split your site at a high level - having these highlevel sections allows you to segment things like services from democracy, or things for residents from those for businesses. how your site is or isn't segmented is a choice you should make, the starter kit has residents, business and council.</p>
+<h2>Landing Pages</h2>
+<p><img style="float: right;" class="img-thumbnail" src="/img/screenshots/landingpage.png" alt="" /></p>
+<p>landing pages form a main part of the site navigation they provide quick and easy to see links to all pages in a section. the order of items on the landing page is determained by the order of the pages inside umbraco.&nbsp;</p>
+<h2>Standard Content Page</h2>
+<p><img style="float: right;" class="img-thumbnail" src="/img/screenshots/standardcontent.png" alt="" /></p>
+<p>A Standard page is used for when you want to put some actual content on the site, the standard pages (like this one) contain an area for content, along with a side navigation of other pages in this section, related pages and contact information.</p>
+<h2>Venue pages</h2>
+<p><img style="float: right;" class="img-thumbnail" src="/img/screenshots/venuepage.png" alt="" /></p>
+<p>All councils have venues: libraries, leisure centers and council offices - venue pages help you display the important information about your venues such as when it's open and where it is - so venue pages have maps, and opening times.</p>
+<h2>Contact Pages</h2>
+<p>Contact pages contain all the details on how to contact the council for a specfic service, by putting all the contact in once place you can measure, signpost and direct users to the best way to contact the council without having to hunt down all those phone numbers all over your website.</p>
+<h2>A to Z</h2>
+<p><img style="float: right;" class="img-thumbnail" src="/img/screenshots/atoz.png" alt="" /></p>
+<p>All council sites have an a to z - the a to z in the starter kit is a simple one, it lists pages by name starting with a letter, many people want a more complex a-z with pages in multiple categories, and that is nice, but remember only 2% of your users will ever look at all your hard work.</p>
+<h2>Search</h2>
+<p>The search page uses the inbuilt umbraco search engine - examine. Examine has lots and lots of configuration options, you can make it do lots and lots of things, for simplicity of the starter kit we just do a simple search.</p>]]></bodyText>
+          <metaSubject></metaSubject>
+          <metaRobots></metaRobots>
+          <serviceAlert></serviceAlert>
+          <landingSummary><![CDATA[Pages that help people use the site like landing pages and venue pages]]></landingSummary>
+          <esdServiceId></esdServiceId>
+          <contactDetails></contactDetails>
+          <relatedItems><![CDATA[[]]]></relatedItems>
+        </ContentPage>
+        <ContentPage guid="3855ad7d-4e91-4d2c-b368-cdfa1ef70443" id="1251" nodeName="Frameworks" isDoc="" updated="2014-04-01T19:30:54.43Z" parentGUID="3faf5fc2-5b1e-499e-bea6-55a8e4b70964" nodeTypeAlias="ContentPage" templateAlias="StandardPage" sortOrder="2" published="true">
+          <umbracoNaviHide>0</umbracoNaviHide>
+          <title><![CDATA[Framework and Foundations]]></title>
+          <bodyText><![CDATA[<p>The starterkit has been build using tools and frameworks that help you get started quickly. frameworks are great because they mean you don't have to worry about every single browser compatability problem, or just how big every phone is. instead they leave you free to concentrate on the important elements of your sites content and design</p>
+<h2><a href="http://getbootstrap.com/">Bootstrap</a></h2>
+<p>The starterkit has been built using bootstrap. bootstrap is a flexible responsive framework that allows you to quickly and easily build a responsive website that works on a multiude of devices.&nbsp;</p>
+<h2><a href="http://jquery.com/">JQuery</a></h2>
+<p>used all over the web for anything javascripty jquery makes it easy to add functionality and features to your site - the starter kit uses jquery 1.11.1 - mainly for backwards compatability with older versions of internet explorer.</p>
+<h2><a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a></h2>
+<p>While icons are not always the best way of displaying information to users, they can be useful and add a bit of imagery where needed. the starter kit uses fontawesome which is a font based icon set.&nbsp;</p>
+<p>font based icon sets are simple to impliment and can save a lot of space compared to traditional image based icon sets. because font awesome stores the icons in a font you can set them to the size and colour you want without having to create a new set of icons.</p>
+<p>&nbsp;</p>]]></bodyText>
+          <metaSubject></metaSubject>
+          <metaRobots></metaRobots>
+          <serviceAlert></serviceAlert>
+          <landingSummary><![CDATA[The tools that underpin the starterkit and make it quick and easy to use]]></landingSummary>
+          <esdServiceId></esdServiceId>
+          <contactDetails></contactDetails>
+          <relatedItems><![CDATA[[]]]></relatedItems>
+        </ContentPage>
+        <ContentPage guid="bd62f5f6-744c-4eb6-9c03-7f07c88f2a93" id="1252" nodeName="Features" isDoc="" updated="2014-04-02T10:53:02.36Z" parentGUID="3faf5fc2-5b1e-499e-bea6-55a8e4b70964" nodeTypeAlias="ContentPage" templateAlias="StandardPage" sortOrder="3" published="true">
+          <umbracoNaviHide>0</umbracoNaviHide>
+          <title><![CDATA[Features]]></title>
+          <bodyText><![CDATA[<p>There are a number of little things hidden around the starter kit, all are designed to make things a bit easier when it comes to managing any site based on the kit</p>
+<h2>Service Alerts</h2>
+<p>Service alerts are small blocks of content that you can place on any page to give users notice of something. this page has a service alert on as an example.&nbsp;</p>
+<p>you create service alerts seperate from the content - then you can apply the same service alert to diffrent parts of the - this means you don't have to copy the same content all over your site and then worry about it being out of date</p>
+<h2>Opening Times</h2>
+<p>One thing all council's have is buildings, and one thing people want to know is when those buildings are open - the starter kit comes with the ability to manage opening times within the site.&nbsp;</p>
+<p>using a specific control for opening times lets you do celver things with the content such as highlighting the current day or even saying if the building is open or closed when the user visits&nbsp;</p>
+<h2>Maps</h2>
+<p>knowing where places are is always a good thing, the starter kit comes with the ability to set the location of a venue using google maps - then display the venue location on a map</p>]]></bodyText>
+          <metaSubject></metaSubject>
+          <metaRobots></metaRobots>
+          <serviceAlert><![CDATA[6014a5df-ca2e-435f-a6e6-8f404f287d81]]></serviceAlert>
+          <landingSummary><![CDATA[Little things in and around the page that make it easier to use.]]></landingSummary>
+          <esdServiceId></esdServiceId>
+          <contactDetails></contactDetails>
+          <relatedItems><![CDATA[[]]]></relatedItems>
+        </ContentPage>
+        <ContentPage guid="506212f7-a237-4284-8a5b-d094f9ab0f02" id="1249" nodeName="more help" isDoc="" updated="2014-04-02T10:52:23.463Z" parentGUID="3faf5fc2-5b1e-499e-bea6-55a8e4b70964" nodeTypeAlias="ContentPage" templateAlias="StandardPage" sortOrder="4" published="true">
+          <umbracoNaviHide>0</umbracoNaviHide>
+          <title><![CDATA[More help]]></title>
+          <bodyText><![CDATA[<p>the starter kit is designed to give you an understanding of how umbraco might work for you, and if you have the resources and skills you can probibly take the ideas in the kit and turn it into your council website.</p>
+<h3>Umbraco Resources</h3>
+<p>The umbraco community is very active and friendly if you have any questions about this starter kit or umbraco as a whole you should checkout the <a href="http://our.umbraco.org/" title="Our.Umbraco">our.umbraco.org</a> community site.</p>
+<p><a href="http://www.umbraco.tv/">umbraco.tv</a> is the umbraco learning website, with lots of video tutorials on how to use umbraco.&nbsp;</p>
+<p>Local Goverment</p>
+<p>there are an increasing number of councils using umbraco, reaching out to them often can be the best way of working out what you want to do - as part of the kit we are hoping to build a <a href="http://jumoo.co.uk/ulocalgov/">directory of councils using umbraco</a></p>
+<h3>Jumoo</h3>
+<p>The starter kit has been developed by <a href="http://jumoo.co.uk/">Jumoo</a>, we are a digital services company, we have experience in delivery evidence based ,customer focused, digital stuff - if you want to chat about what we can do for you - you shoud drop us a line&nbsp;<a href="mailto:info@jumoo.co.uk">info@jumoo.co.uk</a></p>]]></bodyText>
+          <metaSubject></metaSubject>
+          <metaRobots></metaRobots>
+          <serviceAlert></serviceAlert>
+          <landingSummary><![CDATA[If you are struggling or what to learn more this is where you should look]]></landingSummary>
+          <esdServiceId></esdServiceId>
+          <contactDetails></contactDetails>
+          <relatedItems><![CDATA[[]]]></relatedItems>
+        </ContentPage>
+      </Children>
+    </LandingPage>
+    <ContentPage guid="ce2c6983-36c1-4c98-9141-653a23f3f6cf" id="1086" nodeName="Cookies" isDoc="" updated="2014-04-03T22:54:17.037Z" parentGUID="aa44f90f-9280-41b5-8756-d1c5bb27c860" nodeTypeAlias="ContentPage" templateAlias="StandardPage" sortOrder="3" published="true">
+      <umbracoNaviHide>1</umbracoNaviHide>
+      <title><![CDATA[Cookies]]></title>
+      <bodyText><![CDATA[<p>this page is about cookies.</p>]]></bodyText>
+      <metaSubject></metaSubject>
+      <metaRobots></metaRobots>
+      <serviceAlert></serviceAlert>
+      <landingSummary><![CDATA[How cookies are used on this site]]></landingSummary>
+      <esdServiceId></esdServiceId>
+      <contactDetails>c8642eb2-7bb7-42c3-8958-123ebb51e7bb</contactDetails>
+      <relatedItems><![CDATA[[
+  {
+    "caption": "home",
+    "link": "aa44f90f-9280-41b5-8756-d1c5bb27c860",
+    "newWindow": false,
+    "internal": "aa44f90f-9280-41b5-8756-d1c5bb27c860",
+    "edit": false,
+    "isInternal": true,
+    "internalName": "Home",
+    "type": "internal",
+    "title": "home"
+  },
+  {
+    "caption": "away",
+    "link": "http://google.co.uk",
+    "newWindow": false,
+    "edit": false,
+    "isInternal": false,
+    "type": "external",
+    "title": "away"
+  }
+]]]></relatedItems>
+    </ContentPage>
+    <SiteMap guid="906e4d80-0cd1-4dac-919e-ff49204ba278" id="1189" nodeName="Sitemap" isDoc="" updated="2014-04-03T22:54:17.09Z" parentGUID="aa44f90f-9280-41b5-8756-d1c5bb27c860" nodeTypeAlias="SiteMap" templateAlias="SiteMapPage" sortOrder="4" published="true">
+      <umbracoNaviHide>1</umbracoNaviHide>
+      <title><![CDATA[Sitemap]]></title>
+      <bodyText><![CDATA[<p>All the pages on the site</p>]]></bodyText>
+      <metaSubject></metaSubject>
+      <metaRobots></metaRobots>
+      <serviceAlert></serviceAlert>
+      <landingSummary></landingSummary>
+      <esdServiceId></esdServiceId>
+    </SiteMap>
+    <SearchResults guid="23f771cb-2b48-4838-8b69-5f071621afc7" id="1191" nodeName="Search" isDoc="" updated="2014-04-03T22:54:17.14Z" parentGUID="aa44f90f-9280-41b5-8756-d1c5bb27c860" nodeTypeAlias="SearchResults" templateAlias="SearchResults" sortOrder="5" published="true">
+      <umbracoNaviHide>1</umbracoNaviHide>
+      <title><![CDATA[search]]></title>
+      <bodyText><![CDATA[<p>basic search results</p>]]></bodyText>
+      <metaSubject></metaSubject>
+      <metaRobots></metaRobots>
+      <serviceAlert></serviceAlert>
+      <landingSummary></landingSummary>
+      <esdServiceId></esdServiceId>
+    </SearchResults>
+    <AtoZPage guid="211ca7d3-72ba-4cc4-9279-e76567b8e771" id="1220" nodeName="AtoZ" isDoc="" updated="2014-04-03T22:54:17.197Z" parentGUID="aa44f90f-9280-41b5-8756-d1c5bb27c860" nodeTypeAlias="AtoZPage" templateAlias="AtoZPage" sortOrder="6" published="true">
+      <umbracoNaviHide>1</umbracoNaviHide>
+      <title><![CDATA[AtoZ]]></title>
+      <bodyText><![CDATA[<p>A simple A to Z of the site.</p>]]></bodyText>
+      <metaSubject></metaSubject>
+      <metaRobots></metaRobots>
+      <serviceAlert></serviceAlert>
+      <landingSummary></landingSummary>
+      <esdServiceId></esdServiceId>
+    </AtoZPage>
+    <siteSettings guid="5e7b782f-1ea1-4ee5-9997-c80a98bedbd2" id="1081" nodeName="Shared Content" isDoc="" updated="2014-04-03T22:54:17.247Z" parentGUID="aa44f90f-9280-41b5-8756-d1c5bb27c860" nodeTypeAlias="siteSettings" templateAlias="" sortOrder="7" published="true">
+      <umbracoNaviHide>1</umbracoNaviHide>
+      <Children>
+        <ServiceAlertFolder guid="07290684-ce7d-49c1-a028-0bd9e14d4d94" id="1082" nodeName="Service Alerts" isDoc="" updated="2014-02-03T11:15:30.797Z" parentGUID="5e7b782f-1ea1-4ee5-9997-c80a98bedbd2" nodeTypeAlias="ServiceAlertFolder" templateAlias="" sortOrder="0" published="true">
+          <umbracoNaviHide></umbracoNaviHide>
+          <Children>
+            <ServiceAlert guid="6014a5df-ca2e-435f-a6e6-8f404f287d81" id="1083" nodeName="Test Alert" isDoc="" updated="2014-02-03T11:15:59.243Z" parentGUID="07290684-ce7d-49c1-a028-0bd9e14d4d94" nodeTypeAlias="ServiceAlert" templateAlias="" sortOrder="0" published="true">
+              <umbracoNaviHide></umbracoNaviHide>
+              <title><![CDATA[Test Service Alert]]></title>
+              <bodyText><![CDATA[<p>this is a test service alert, which can be placed on anypage.</p>]]></bodyText>
+              <metaSubject></metaSubject>
+              <metaRobots></metaRobots>
+              <alertType><![CDATA[info]]></alertType>
+            </ServiceAlert>
+          </Children>
+        </ServiceAlertFolder>
+      </Children>
+    </siteSettings>
+  </Children>
+</Homepage>
